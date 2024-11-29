@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+body {
+  @apply font-primary text-2xl leading-7;
+}
+
+p {
+  @apply text-black;
+  font-size: 2rem;
+}
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: calc(2.5rem / 2) 0;
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 3.4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.6rem;
+}
+
+.seccion {
+  @apply my-10;
+}
+
+.navegation {
+  @apply md:flex gap-4 items-center;
+  a {
+    @apply text-white text-xl block text-center uppercase;
+  }
+  &.foo {
+    a {
+      @apply text-lg;
+    }
+  }
+}
