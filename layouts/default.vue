@@ -7,6 +7,7 @@ const head = useLocaleHead({
   addSeoAttributes: true,
 })
 const title = computed(() => t('layouts.title', { title: t(route.meta.title ?? 'TBD') }))
+const isIndexPage = computed(() => route.path === '/') // Check if the current page is the index page
 useHead({
   title: title.value,
   meta: [
@@ -35,7 +36,7 @@ useHead({
       </template>
     </Head>
     <Body>
-      <Header />
+      <Header :init="isIndexPage" />
       <slot />
       <Footer />
     </Body>

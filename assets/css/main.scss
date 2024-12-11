@@ -46,7 +46,10 @@ h4 {
 .navegation {
   @apply md:flex gap-4 items-center;
   a {
-    @apply text-white text-xl block text-center uppercase;
+    @apply text-white text-xl block text-center uppercase transition-colors;
+    &:hover {
+      @apply text-green;
+    }
   }
   &.foo {
     a {
